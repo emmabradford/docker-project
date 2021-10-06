@@ -1,3 +1,4 @@
+#tasks
 #List name of all the text file at location: /home/data
 #Read the two text files and count total number of words in each text files
 #Add all the number of words to find the grand total (total number of words in both files)
@@ -9,6 +10,7 @@
 #Source: https://realpython.com/working-with-files-in-python/#listing-all-files-in-a-directory
 
 import os
+
 #list of names of files in /home/data
 #change the value of basepath to be /home/data (where if. and limereick areZZ)
 filenames = []
@@ -44,3 +46,27 @@ print("total words in both files")
 totalWords = wordsInLim + wordsInIF
 print(totalWords)
 
+#Source: https://computersciencehub.io/python/python-find-most-commonly-used-word-in-text-file/
+#list the top 3 words with maximum number of counts in IF.txt.  Include the word counts for the top 3 words.
+counting = Counter(wordsInIF)
+wordAndFrequency = counting.most_common()
+print("Most common word")
+print(wordAndFrequency[0][0])
+print("frequency of word")
+print(wordAndFrequency[0][1])
+f1 = wordAndFrequency[0][1]
+w1 = wordAndFrequency[0][0]
+
+print("Second most common word")
+print(wordAndFrequency[1][0])
+print("frequency of word")
+print(wordAndFrequency[1][1])
+f2 = wordAndFrequency[1][1]
+w2 = wordAndFrequency[1][0]
+
+print("Third most common word")
+print(wordAndFrequency[2][0])
+print("frequency of word")
+print(wordAndFrequency[2][1])
+f3 = wordAndFrequency[2][1]
+w3 = wordAndFrequency[2][0]
