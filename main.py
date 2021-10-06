@@ -38,3 +38,9 @@ datal = filel.read()
 wordsInLim = datal.split()
 print("number of words in limeric.txt")
 print(wordsInLim)
+
+#Add all the number of words to find the grand total (total number of words in both files)
+print("total words in both files")
+totalWords = wordsInLim + wordsInIF
+print(totalWords)
+
