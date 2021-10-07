@@ -10,6 +10,7 @@
 #Source: https://realpython.com/working-with-files-in-python/#listing-all-files-in-a-directory
 
 import os
+import socket   
 
 #list of names of files in /home/data
 #change the value of basepath to be /home/data (where if. and limereick areZZ)
@@ -70,3 +71,11 @@ print("frequency of word")
 print(wordAndFrequency[2][1])
 f3 = wordAndFrequency[2][1]
 w3 = wordAndFrequency[2][0]
+
+#Source: https://www.geeksforgeeks.org/python-program-find-ip-address/
+# Find the IP address of your machine
+hostname = socket.gethostname()   
+IPAddr = socket.gethostbyname(hostname)   
+print("Ip address of computer")   
+print(IPAddr)
+IP = IPAddr
