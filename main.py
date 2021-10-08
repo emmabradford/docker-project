@@ -36,7 +36,7 @@ print(numWordsInIF)
 
 #read and count number of words in limeric.txt
 #change to \home\data\limeric.txt
-filel = open("Limerick-1-1.txt", "rt")
+filel = open("./home/data/Limerick-1-1.txt", "rt")
 datal = filel.read()
 wordsInLim = datal.split()
 numWordsInLim = len(wordsInLim)
