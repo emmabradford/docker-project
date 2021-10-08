@@ -11,7 +11,7 @@
 
 import os
 import socket   
-
+from collections import Counter
 #list of names of files in /home/data
 #change the value of basepath to be /home/data (where if. and limereick areZZ)
 filenames = []
@@ -31,20 +31,22 @@ print(filenames)
 filei = open("IF.txt", "rt")
 datai = filei.read()
 wordsInIF = datai.split()
+numWordsInIF = len(wordsInIF)
 print("number of words in if.txt")
-print(wordsInIF)
+print(numWordsInIF)
 
 #read and count number of words in limeric.txt
 #change to \home\data\limeric.txt
-filel = open("limeric.txt", "rt")
+filel = open("Limerick-1-1.txt", "rt")
 datal = filel.read()
 wordsInLim = datal.split()
+numWordsInLim = len(wordsInLim)
 print("number of words in limeric.txt")
-print(wordsInLim)
+print(numWordsInLim)
 
 #Add all the number of words to find the grand total (total number of words in both files)
 print("total words in both files")
-totalWords = wordsInLim + wordsInIF
+totalWords = numWordsInLim + numWordsInIF
 print(totalWords)
 
 #Source: https://computersciencehub.io/python/python-find-most-commonly-used-word-in-text-file/
