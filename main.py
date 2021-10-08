@@ -15,20 +15,19 @@ from collections import Counter
 #list of names of files in /home/data
 #change the value of basepath to be /home/data (where if. and limereick areZZ)
 filenames = []
-basepath = './'
+basepath = './home/data'
 print("file names in /home/data")
 for entry in os.listdir(basepath):
     if os.path.isfile(os.path.join(basepath, entry)):
         print(entry)
         filenames.append(entry)
-print(filenames)
 
 #source:https://pythonexamples.org/python-count-number-of-words-in-text-file/
 
 #read 2 text files and wordcount
 #read and count number of words in if.txt
 #change to \home\data\if.txt
-filei = open("IF.txt", "rt")
+filei = open("./home/data/IF.txt", "rt")
 datai = filei.read()
 wordsInIF = datai.split()
 numWordsInIF = len(wordsInIF)
